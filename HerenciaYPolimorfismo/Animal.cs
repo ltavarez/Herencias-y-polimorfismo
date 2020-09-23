@@ -38,6 +38,5 @@ namespace HerenciaYPolimorfismo
         {
             Console.WriteLine("Mi color es " + Color);
         }
-
     }
 }
