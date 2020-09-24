@@ -8,13 +8,11 @@ namespace HerenciaYPolimorfismo
         {
            
             ILector lector = new LectorTxt("archivo.txt","archivostxt");
-
             lector.AbrirConexion();
             lector.Escribir();
             lector.Leer();
 
             lector = new LectorXml("archivo.xml", "archivosxml");
-
             lector.AbrirConexion();
             lector.Escribir();
             lector.Leer();
