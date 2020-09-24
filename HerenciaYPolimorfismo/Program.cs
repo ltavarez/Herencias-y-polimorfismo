@@ -6,25 +6,19 @@ namespace HerenciaYPolimorfismo
     {
         static void Main(string[] args)
         {
-            DateTime fechaNac =  new DateTime(1993,12,20);
-           Perro nuevoPerro = new Perro(fechaNac,"Toby","Amarillo");
+           
+            ILector lector = new LectorTxt("archivo.txt","archivostxt");
 
-            Console.WriteLine(nuevoPerro.GetEdad());
+            lector.AbrirConexion();
+            lector.Escribir();
+            lector.Leer();
 
-            nuevoPerro.ImprimirColor();
-            nuevoPerro.ImprimirNombre();
+            lector = new LectorXml("archivo.xml", "archivosxml");
 
-            DateTime fechaNacGato = new DateTime(2000, 12, 20);
-            Gato nuevoGato = new Gato(fechaNacGato, "misu", "negro");
+            lector.AbrirConexion();
+            lector.Escribir();
+            lector.Leer();
 
-            Console.WriteLine(nuevoGato.GetEdad());
-
-            nuevoGato.ImprimirColor();
-            nuevoGato.ImprimirNombre();
-
-            nuevoPerro.Ladrar();
-
-            nuevoGato.Maullar();
 
             Console.ReadLine();
         }
